@@ -35,7 +35,7 @@ def __repr__(self):
 
 class Typedish(db.Model):
     MemberlID = db.Column(db.Integer, primary_key=True)
-    VegetarianID = db.Column(db.String(3), db.ForeignKey('menu.DishID'), primary_key=True, nullable=False)
+    VegetarianID = db.Column(db.Intreger, db.ForeignKey('menu.DishID'), primary_key=True, nullable=False)
     HotID = db.Column(db.String(3), nullable=False)
 
     def __repr__(self):
