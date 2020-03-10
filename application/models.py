@@ -5,7 +5,7 @@ class menu(db.Model):
     DishID = db.Column(db.Integer, primary_key=True)
     Title = db.Column(db.String(100), nullable=False, unique=True)
     Type = db.Column(db.String(50), nullable=False, unique=True)
-    Price = db.Column(db.Integer(5), nullable=False, unique=True)
+    Price = db.Column(db.Integer, nullable=False, unique=True)
     Typedish = db.relationship('Typedish')
 
     def __repr__(self):
