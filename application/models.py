@@ -27,6 +27,9 @@ class member(db.Model, UserMixin):
     EmailAddress = db.Column(db.String(150), nullable=False, unique=True)
     Password = db.Column(db.String(500), nullable=False)
     Purchase = db.relationship('Typedish')
+    
+    def get_id(self):
+        return (self.MemberID)
 
 def __repr__(self):
    return ''.join([
