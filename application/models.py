@@ -16,7 +16,7 @@ class menu(db.Model):
 
 @login_manager.user_loader
 def load_user(MemberID):
-    return Member.query.get(int(MemberID))
+    return member.query.get(int(MemberID))
 
 class member(db.Model, UserMixin):
     MemberID = db.Column(db.Integer, primary_key=True)
